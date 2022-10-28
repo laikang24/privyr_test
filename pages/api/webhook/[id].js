@@ -24,6 +24,7 @@ export default async function handler(req, res) {
 
         if (!name || !email || !phone) {
           res.status(400).json({ message: "Missing fields" });
+          return;
         }
 
         const lead = new Lead();
