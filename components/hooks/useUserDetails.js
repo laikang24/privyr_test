@@ -15,7 +15,7 @@ const useUserDetails = (id) => {
         .then((data) => {
           setData({
             hookUrl: `${window.location.origin}/webhook/${data.hookId}`,
-            leads: data.leads,
+            leads: data.leads ?? [],
           });
           setLoading(false);
         });
